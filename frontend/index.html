@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Sudoku Solver</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body{font-family:system-ui;margin:24px;display:grid;gap:16px;justify-items:center}
+    .grid{display:grid;grid-template-columns:repeat(9,42px);gap:6px}
+    input{width:42px;height:42px;text-align:center;font-size:18px;border:1px solid #ccc;border-radius:8px}
+    .toolbar{display:flex;gap:8px;flex-wrap:wrap}
+    button,select{padding:10px 14px;border:0;border-radius:10px;box-shadow:0 2px 8px #0002;cursor:pointer}
+  </style>
+</head>
+<body>
+  <h1>🧩 Sudoku Solver</h1>
+
+  <div class="grid" id="grid"></div>
+
+  <div class="toolbar">
+    <select id="difficulty">
+      <option value="easy">easy</option>
+      <option value="medium">medium</option>
+      <option value="hard">hard</option>
+      <option value="evil">evil</option>
+    </select>
+    <button id="loadBtn">Load Selected</button>
+
+    <select id="method">
+      <option value="heuristic">heuristic</option>
+      <option value="forward">forward</option>
+      <option value="backtracking">backtracking</option>
+    </select>
+    <button id="solveBtn">Solve</button>
+    <button id="clearBtn">Clear</button>
+  </div>
+
+  <div id="msg"></div>
+  <script src="app.js"></script>
+</body>
+</html>
